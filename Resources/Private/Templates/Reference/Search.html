@@ -1,0 +1,36 @@
+<f:layout name="Default" />
+<f:section name="pageTitle">Suchergebnisse für "{search}"</f:section>
+<f:section name="Main">
+    <div class="page-header">
+        <h1>Suchergebnisse für "{search}"</h1>
+    </div>
+    <f:if condition="{results}">
+        <f:then>
+            <p>Zu dieser Suche wurden folgende Verweise gefunden:</p>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Plan</th>
+                    <th>Jahr</th>
+                    <th>Tag</th>
+                    <th>Lesung</th>
+                </tr>
+                </thead>
+                <tbody>
+                <f:for each="{results}" as="result">
+                    <tr>
+                        <td>Rev. {result.revision}</td>
+                        <td>{result.reading}</td>
+                        <td><small>{result.section}</small><br />{result.day}</td>
+                        <td>{result.reference -> f:format.raw()}</td>
+                    </tr>
+                </f:for>
+                </tbody>
+            </table>
+        </f:then>
+        <f:else><p>Zu dieser Suche wurden keine Ergebnisse gefunden.</p></f:else>
+    </f:if>
+    <hr />
+    <a class="btn btn-default" href="{baseUrl}">Zurück zur Suche</a>
+</f:section>
+<f:section name="jsFooter"></f:section>

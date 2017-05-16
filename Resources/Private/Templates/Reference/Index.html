@@ -1,0 +1,22 @@
+<f:layout name="Default" />
+
+<f:section name="pageTitle">Passage suchen</f:section>
+<f:section name="Main">
+
+    <div class="page-header">
+        <h1>Bibelstelle suchen</h1>
+        <p>Gib hier eine Bibelstelle ein und finde heraus, wo sie in der Perikopenordnung auftaucht:</p>
+    </div>
+
+    <form action="{baseUrl}reference/search" method="post">
+        <div class="form-group">
+            <label for="reference">Bibelstelle</label>
+            <input class="form-control" type="text" name="reference" value="" />
+        </div>
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Suchen" />
+        </div>
+    </form>
+
+</f:section>
+<f:section name="jsFooter"></f:section>

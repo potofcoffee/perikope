@@ -1,0 +1,6 @@
+default:
+  host: localhost
+  user:
+  pass:
+  name:
+  init: SET NAMES utf8; SET SESSION sql_mode='';

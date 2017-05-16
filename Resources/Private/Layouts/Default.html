@@ -1,0 +1,55 @@
+<f:layout name="Default" />
+<!DOCTYPE html>
+<html lang="de">
+<head>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title><f:render section="pageTitle"></f:render> :: περικοπη</title>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{baseUrl}"><span class="fa fa-home"></span> περικοπη</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+            </ul>
+        </div><!--/.nav-collapse -->
+        <footer>
+    </div>
+</nav>
+
+<div class="container">
+
+    <f:render section="Main" />
+</div>
+
+<footer class="footer navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+        <p class="navbar-text pull-left text-muted">
+            περικοπη {perikope.version}. Copyright (c) Christoph Fischer, <a href="mailto:chris@toph.de">chris@toph.de</a>, <a href="https://christoph-fischer.org" target="_blank">https://christoph-fischer.org</a>.^<br />
+            This is free software, licensed under GPL 3.0+.
+        </p>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<f:if condition="{page.js.footer}">
+    <f:for each="{page.js.footer}" as="script">
+        <script src="{script}"></script>
+    </f:for>
+</f:if>
+<f:render section="jsFooter"></f:render>

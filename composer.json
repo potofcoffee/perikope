@@ -1,0 +1,26 @@
+{
+  "name": "peregrinus/perikope",
+  "description": "Perikope",
+  "minimum-stability": "stable",
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Christoph Fischer",
+      "email": "chris@toph.de"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/potofcoffee/cadre.git"
+    }
+  ],
+  "require": {
+    "peregrinus/cadre": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Peregrinus\\Perikope\\": "Classes/"
+    }
+  }
+}
